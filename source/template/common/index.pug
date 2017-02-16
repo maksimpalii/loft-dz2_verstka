@@ -1,0 +1,52 @@
+block content
+  .wrapper
+    section.l-section.l-hero
+      include ../common/_soc_widget
+
+      .l-hero__bg
+        .l-hero__bg__img
+      .l-hero__container
+
+        .c-user
+          .c-user__pic
+            img(src = ("/assets/img/me.png"))
+          .c-user__profile
+            .c-user__name= one.Globvars.name
+            .c-user__comment Личный сайт веб разработчика
+        .c-hero__title-pic
+          svg.svg__stars(preserveAspectRatio="xMinYMin meet")
+            use.svg_icon.stars1(xlink:href="assets/img/sprite/sprite/img.svg#stars1")
+    section.l-section.l-about
+      .labout__col.labout__col_left
+        .c-about__triangle
+        .c-section-title
+          .c-section-title__title Обо мне
+          svg.svg__about__img(preserveAspectRatio="xMinYMin meet")
+            use(xlink:href="assets/img/sprite/sprite/img.svg#stars2")
+        .c-about
+          .c-about__pic
+          .c-block-title
+          .c-block-text
+
+      .labout__col.labout__col_rigth
+        .c-about__triangle
+        .l-skills
+          .c-block-title
+          .l-skills
+            .c-block-title
+            .l-skills__text
+              p
+              p
+              p
+            ul.c-skills-group
+              li.l-skills-group__item
+                .c-skills-group__title Frondend
+                ul.l-skills-list
+                  li.l-skills-list__item
+                    .c-skill
+                      svg.c-skill__circle
+                      .c-skill__title
+
+
+
+    section.l-section.l-map

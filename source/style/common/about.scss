@@ -1,0 +1,130 @@
+.wrapper {
+  overflow: hidden;
+}
+body.home{height: 2566px;}
+.l-hero{
+  }
+.l-hero__bg {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.l-hero__bg__img {
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url(/assets/img/background-night-big.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 100%;
+}
+
+.l-hero .socials {
+  float: left;
+  margin: 29px 0 0 20px;
+  z-index: 10;
+  position: absolute;
+}
+
+.l-hero__container {
+  margin: auto;
+  width: 100%;
+  height: 600px;
+}
+
+.svg__stars {
+  fill: #fff;
+  opacity: .07;
+  width: 456px;
+  height: 275px;
+  position: absolute;
+  left: 649px;
+  top: 116px;
+  z-index: -1;
+}
+
+.c-user__pic {
+  width: 143px;
+  height: 143px;
+  margin: auto;
+  top: 154px;
+  position: absolute;
+  left: 829px;
+
+}
+
+.c-user__profile {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 295px;
+  width: 100%;
+
+}
+
+.c-user__comment {
+  font-family: 'Roboto-Regular';
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.c-user__name {
+  font-family: 'Roboto-Medium';
+  margin: 20px 0 6px 0;
+  font-size: 35px;
+}
+
+.l-about {
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+
+.labout__col {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  background-color: #f2f0e8;
+  width: 50%;
+}
+.labout__col_left .c-about__triangle{width: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 158px solid #f2f0e8;
+  border-right: 900px solid transparent;
+  position: absolute;
+  left: 0;
+  margin-top: -158px;}
+
+.labout__col_rigth .c-about__triangle{width: 0;
+  width: 0;
+  height: 0;
+  border-right: 900px solid #f2f0e8;
+  border-top: 158px solid transparent;
+  position: absolute;
+  right: 0;
+  margin-top: -158px;}
+.c-section-title{margin-top: 5px;width: 100%;}
+.c-section-title__title{
+  font-family: 'Sansus Webissimo';
+  text-transform: uppercase;
+  padding-left: 120px;
+  font-size: 63px;
+  color: #474b57;}
+.svg__about__img{
+  position: absolute;
+  left: 64px;
+  top: -33px;
+  fill: #1056d1;
+  opacity: 0.1;
+  transform-origin: center;
+  transform: rotate(189deg) scale(1.25);
+}

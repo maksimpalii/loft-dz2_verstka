@@ -1,0 +1,21 @@
+{
+  "Globvars": {
+      "name": "Максим Палий"
+  },
+  "Pages": {
+    "wellcome": {
+      "title": "Wellcome",
+      "author": "Максим Палий",
+      "description": "описание",
+      "keywords": "ключевые слова",
+      "bodyClass": "wellcome"
+    },
+    "home": {
+      "title": "Portfolio",
+      "author": "Максим Палий",
+      "description": "описание главной",
+      "keywords": "ключевые слова главной",
+      "bodyClass": "home"
+    }
+  }
+}
