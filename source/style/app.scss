@@ -5,8 +5,8 @@ body {
   position: relative;
 }
 
-ul, li {margin: 0;padding: 0;}
+ul, li, p {margin: 0;padding: 0;}
 
-@import 'common/greating';
 @import 'common/fonts';
+@import 'common/greating';
 @import 'common/about';
