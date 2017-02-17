@@ -5,3 +5,30 @@ mixin nav(className, items, activeItem)
                 each item, index in items
                     li(class=`${className}__item` + ( (index === activeItem) ? ` ${className}__item_active` : '') )
                         a(class=`${className}__link` href='#')= item
+
+mixin circles(groupsName)
+    ul.l-skills-list(class=`skills-list_${groupsName}`)
+        if groupsName === 'Frontend'
+            each vars in one.Circles.Frontend
+                li.l-skills-list__item
+                    .c-skill
+                        svg.c-skill__circle
+                            circle.skills__circle-under(cx="60" cy="60" r="50")
+                            circle.skills__circle-above(cx="60" cy="60" r="50" style={opacity: vars.counts/100} stroke-dasharray= vars.counts*3.16  + ' 316')
+                        .c-skill__title= vars.name
+        else if groupsName === 'Backend'
+            each vars in one.Circles.Backend
+                li.l-skills-list__item
+                    .c-skill
+                        svg.c-skill__circle
+                            circle.skills__circle-under(cx="60" cy="60" r="50")
+                            circle.skills__circle-above(cx="60" cy="60" r="50" style={opacity: vars.counts/100} stroke-dasharray= vars.counts*3.16 + ' 316')
+                        .c-skill__title= vars.name
+        else if groupsName === 'WorkFlow'
+            each vars in one.Circles.WorkFlow
+                li.l-skills-list__item
+                    .c-skill
+                        svg.c-skill__circle
+                            circle.skills__circle-under(cx="60" cy="60" r="50")
+                            circle.skills__circle-above(cx="60" cy="60" r="50" style={opacity: vars.counts/100} stroke-dasharray= vars.counts*3.16  + ' 316' )
+                        .c-skill__title= vars.name

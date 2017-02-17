@@ -39,18 +39,20 @@ block content
           .c-block-title
           .l-skills
             .c-block-title
+              span.c-block-title__title Чем я могу быть вам полезен
             .l-skills__text
-              p
-              p
-              p
+              p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
             ul.c-skills-group
               li.l-skills-group__item
-                .c-skills-group__title Frondend
-                ul.l-skills-list
-                  li.l-skills-list__item
-                    .c-skill
-                      svg.c-skill__circle
-                      .c-skill__title Html5
+                .c-skills-group__title Frontend
+                   +circles('Frontend')
+              li.l-skills-group__item
+                .c-skills-group__title Backend
+                  +circles('Backend')
+              li.l-skills-group__item
+                .c-skills-group__title WorkFlow
+                  +circles('WorkFlow')
+
 
 
 
