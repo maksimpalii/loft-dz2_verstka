@@ -6,6 +6,8 @@ mixin nav(className, items, activeItem)
                     li(class=`${className}__item` + ( (index === activeItem) ? ` ${className}__item_active` : '') )
                         a(class=`${className}__link` href='#')= item
 
+
+
 mixin circles(groupsName)
     ul.l-skills-list(class=`skills-list_${groupsName}`)
         if groupsName === 'Frontend'
@@ -32,3 +34,12 @@ mixin circles(groupsName)
                             circle.skills__circle-under(cx="60" cy="60" r="50")
                             circle.skills__circle-above(cx="60" cy="60" r="50" style={opacity: vars.counts/100} stroke-dasharray= vars.counts*3.16  + ' 316' )
                         .c-skill__title= vars.name
+        else
+            each vars in one.Circles.None
+                li.l-skills-list__item
+                    .c-skill
+                        svg.c-skill__circle
+                            circle.skills__circle-under(cx="60" cy="60" r="50")
+                            circle.skills__circle-above(cx="60" cy="60" r="50" style={opacity: vars.counts / 100} stroke-dasharray= vars.counts * 3.16 + ' 316' )
+                        .c-skill__title= vars.name
+

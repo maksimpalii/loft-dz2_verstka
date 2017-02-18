@@ -23,7 +23,7 @@
     "Frontend" : [
       {
         "name": "HTML5",
-        "counts": "100"
+        "counts": "10"
       },
       {
         "name": "CSS3",
@@ -64,6 +64,12 @@
       {
         "name": "Bower",
         "counts": "15"
+      }
+    ],
+    "None" : [
+      {
+        "name": "undefined",
+        "counts": "0"
       }
     ]
   }
