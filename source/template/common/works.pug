@@ -19,42 +19,56 @@ block content
                 svg.arrow-down__svg(preserveaspectratio='xMinYMin meet')
                     use.svg__icon(xlink:href='assets/img/sprite/sprite/img.svg#arrow_down')
 
-        section.l-section.l-about
-            .labout__col.labout__col_left
-                .c-about__triangle
-                .c-section-title
-                    .c-section-title__title Обо мне
-                    svg.svg__about__img(preserveAspectRatio="xMinYMin meet")
-                        use(xlink:href="assets/img/sprite/sprite/img.svg#stars2")
-
-
 
 
         section.l-section.c-slider
-            .c-section-title
-                .c-section-title__title Мои работы
-                    svg.svg__about__img(preserveAspectRatio="xMinYMin meet")
+            .c-section-title-slider
+                .c-slider__star
+                    svg.svg__works__img(preserveAspectRatio="xMinYMin meet")
                         use(xlink:href="assets/img/sprite/sprite/img.svg#stars2")
-                .c-slider__triangle
-                    .c-triangle__left
-                    .c-triangle__right
-            include ../common/_works_widget
-        section.l-footer
-            .footer__top
-                .footer__col
-                    .col__comment
-                        p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
-                .footer__col
-                    .col__menu_soc
-                        .footer__menu
-                            +nav('menu-footer', ["Мои работы", "Обо мне", "Блог", "Авторизация"])
-                        .footer__soc
-                            include ../common/_soc_widget
-                .footer__col.footer__contact
-                    .col__footer__contact__title
-                        p skype_kdn
-                        p astahov@gmail.com
-                        p +7 931 200 93 24
-                        p г. Новосибирск, ул. Инская, д.4
-            .footer__copyright
-                p © Владимир Астахов | Создано с любовью в LoftSchool | 2016
+                .c-section-title-slider__title Мои работы
+            .c-slider__triangle
+                .c-triangle__left
+                .c-triangle__right
+                .c-triangle__bottom
+            include ../common/_works_slider
+        section.l-speakme
+            .l-speakme__background
+            .c-section-title-slider
+                .c-slider__star
+                    svg.svg__works__img(preserveAspectRatio="xMinYMin meet")
+                        use(xlink:href="assets/img/sprite/sprite/img.svg#stars2")
+                .c-section-title-slider__title
+                                                | Что обо мне
+                                                br
+                                                | говорят
+            .l-speakme__comments
+                .c-speakme__comments
+                    .c-speakme__comments__img
+                        img.comments__img(src="assets/img/photo-dima.png")
+                    .c-speakme__comments__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                    .c-speakme__comments__sign
+                        .c-speakme__comments__sign__name Ковальчук Дмитрий
+                        .c-speakme__comments__sign__position — основатель Loftschool
+
+                .c-speakme__comments
+                    .c-speakme__comments__img
+                        img.comments__img(src="assets/img/photo-vlad.png")
+                    .c-speakme__comments__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                    .c-speakme__comments__sign
+                        .c-speakme__comments__sign__name Сабанцев Владимир
+                        .c-speakme__comments__sign__position — преподаватель
+            .l-works_contacts
+                form.c-works_contacts__form
+                    .contacts__form__title Связаться со мной
+                    input#name.input(placeholder='Ваше имя', name='name')
+                    input#mail.input(placeholder='Ваш email', name='mail')
+                    textarea#message.textarear(placeholder='Ваше сообщение', name='message')
+                    .contacts__form__buttons-panel
+                        input.buttons-panel__item.buttons-panel__item--send(type='submit', value='Отправить', disable='true')
+                        input.buttons-panel__item.buttons-panel__item--clear(type='reset', value='Отчистить')
+                a.smooth-scroll.pointer-bottom(href='#header-works')
+                    svg.arrow-down__svg(preserveaspectratio='xMaxYMax meet', viewbox='0 0 25.18 16.164')
+                        use.svg__icon(xlink:href='assets/img/sprite/img.svg#arrow_down')
+
+        include ../common/_footer

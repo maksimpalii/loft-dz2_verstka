@@ -1,0 +1,24 @@
+section.l-footer
+    .footer__top
+        .footer__col
+            .col__comment
+                p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+        .footer__col
+            .col__menu_soc
+                .footer__menu
+                    +navs('menu-footer', {
+                        "Мои работы": "works.html",
+                        "Обо мне": "about.html",
+                        "Блог": "blog.html",
+                        "Авторизация": "index.html",
+                    })
+                .footer__soc
+                    include ../common/_soc_widget
+        .footer__col.footer__contact
+            .col__footer__contact__title
+                p maksim_p.s.
+                p maksim.palii@gmail.com
+                p +380 99 742 20 50
+                p г. Киев, пр-т Оболонский, д.40
+    .footer__copyright
+        p © Владимир Астахов | Создано с любовью в LoftSchool | 2016

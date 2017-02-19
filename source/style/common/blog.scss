@@ -1,0 +1,124 @@
+.blog {
+  .l-hero__bg {
+    height: 518px;
+  }
+  .c-user__pic {
+    top: 82px;
+  }
+  .c-user__profile {
+    top: 245px;
+  }
+  .c-hero__title-pic {
+    .svg__stars {
+      top: 55px;
+    }
+  }
+  .c-user__name {
+    font-size: 63px;
+    line-height: 56px;
+    font-family: "SansusWebissimo";
+    margin: 0;
+    text-transform: uppercase;
+  }
+  .c-user__comment {
+    margin-top: 18px;
+  }
+  .c-slider__triangle {
+    position: absolute;
+    top: 400px;
+    width: 100%;
+  }
+  .l-hero__container {
+    height: 400px;
+  }
+  .c-triangle__left {
+    border-bottom: 158px solid #faf8f0;
+  }
+  .c-triangle__right {
+    border-right: 900px solid #faf8f0;
+  }
+  .l-footer {
+    position: relative;
+    background: rgba(28, 32, 42, 0.85);
+  }
+}
+
+.l-blog_container {
+  background: #faf8f0;
+  position: relative;
+  width: 100%;
+}
+
+.l-blog_container__inner {
+  width: 1550px;
+  margin: 0 auto;
+  padding-top: 58px;
+}
+
+.l-blog_left_menu {
+  width: 18%;
+  position: absolute;
+}
+
+.l-blog_rigth_content {
+  width: 57%;
+  margin-left: 383px;
+}
+
+.blog_item {
+  border-bottom: 4px solid #cfcfcf;
+  padding-bottom: 40px;
+  margin-bottom: 62px;
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+.blog_title {
+  font-size: 35px;
+  font-family: "SansusWebissimo";
+  color: #474b57;
+  line-height: 41px;
+}
+
+.blog_date {
+  color: #083c96;
+  font-size: 16px;
+  font-family: "Roboto-Regular";
+  opacity: 0.7;
+  margin: 20px 0;
+}
+
+.blog_text {
+  color: #455a64;
+  font-size: 16px;
+  font-family: "Roboto-Regular";
+  line-height: 26px;
+  margin: 20px 0px;
+  p {
+    margin: 8px 0;
+  }
+}
+
+.blog_img__content {
+  margin: 5px;
+}
+
+.menu_blog {
+  text-align: right;
+  width: 267px;
+}
+
+.menu_blog__item {
+  list-style-type: none;
+  color: #455a64;
+  font-size: 16px;
+  font-family: "Roboto-Regular";
+  line-height: 26px;padding: 15px 18px 11px 0;
+}
+
+.menu_item__active {
+  color: #083c96;font-family: "Roboto-Medium";
+  border-right: 3px solid #0548be;
+}

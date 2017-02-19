@@ -1,12 +1,13 @@
 body {
   width: 1800px;
   margin: 0 auto;
-  overflow-x: hidden;
   position: relative;
 }
 
 ul, li, p {margin: 0;padding: 0;}
 
 @import 'common/fonts';
-@import 'common/greating';
+@import 'common/index';
 @import 'common/about';
+@import 'common/works';
+@import 'common/blog';

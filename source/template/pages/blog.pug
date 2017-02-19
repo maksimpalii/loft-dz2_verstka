@@ -1,0 +1,11 @@
+extends ../_layout
+
+block variables
+    - var title = one.Pages.blog.title
+    - var author = one.Pages.blog.author
+    - var description = one.Pages.blog.description
+    - var keywords = one.Pages.blog.keywords
+    - var bodyClass = one.Pages.blog.bodyClass
+
+block content
+include ../common/blog
