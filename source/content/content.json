@@ -9,14 +9,14 @@
       "author": "Максим Палий",
       "description": "описание",
       "keywords": "ключевые слова",
-      "bodyClass": "wellcome"
+      "bodyClass": "page-home"
     },
     "about": {
       "title": "Portfolio",
       "author": "Максим Палий",
       "description": "описание портфолио",
       "keywords": "ключевые слова портфолио",
-      "bodyClass": "about"
+      "bodyClass": "page-about"
     },
     "works": {
       "title": "Works",

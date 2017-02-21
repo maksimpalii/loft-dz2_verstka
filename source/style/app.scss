@@ -2,9 +2,20 @@ body {
   width: 1800px;
   margin: 0 auto;
   position: relative;
+
+  color: #fff;
+  font-family: 'Roboto-Regular';
+  font-size: 16px;
 }
 
-ul, li, p {margin: 0;padding: 0;}
+ul, li, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #fff;
+}
 
 @import 'common/fonts';
 @import 'common/index';

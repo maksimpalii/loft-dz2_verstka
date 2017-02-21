@@ -1,149 +1,150 @@
-.block-wellcome {
+.page-home{width: 100%;
+  margin: auto;
+  position: fixed;height: 100%;}
+.wrapper-home{overflow: hidden;
   width: 100%;
-  height: 900px;
+  position: relative;
+  height: 100%;}
+.background-img {
+  width: 100%;
+  height: 100%;
   background: url('/assets/img/back_main.jpg') no-repeat;
   background-size: cover;
   display: block;
-  position: relative;
+  position: absolute;
+  z-index: -1;
 }
 
-.button_authorisation {
-  border: 1px solid #fff;
-  color: #fff;
-  font-family: 'Roboto-Medium';
-  font-size: 16px;
-  width: 178px;
-  text-align: center;
-  height: 23px;
-  padding: 10px 0px;
+.button_authorization {
   position: absolute;
-  line-height: 22px;
+  border: 1px solid #fff;
   right: 0;
-  margin: 24px 100px 0 0;
-  cursor: pointer;
+  margin: 1.36% 5.5% 0 0;
   &:hover {
     background: #083c96;
     border: 1px solid #083c96;
   }
 }
 
-.button_authorisation__link {
+.button_authorization__link {
   text-decoration: none;
-  color: #fff;
-}
-
-.info-box {
-  width: 380px;
-  height: 395px;
-  background: rgba(28, 31, 41, 0.5);
-  position: absolute;
-  top: 249px;
-  left: 710px;
-}
-
-.info-box__wellcome__image {
-  width: 140px;
-  margin: 40px auto 0 auto;
-}
-
-.info-box__wellcome__name {
-  color: #fff;
-  text-align: center;
+  padding: 10px 28px;
   font-family: 'Roboto-Medium';
-  margin: 9px 0 0 0;
-  font-size: 28px;
-  line-height: 28px;
-}
-
-.info-box__wellcome__comment {
-  margin: 10px 0 33px 0;
-  color: #fff;
-  text-align: center;
-  font-family: 'Roboto-Regular';
-  font-size: 16px;
-  opacity: 0.8;
-  text-align: center;
-  width: 100%;
+  line-height: 22px;
   display: block;
 }
 
-.info-box__wellcome__socials {
-  position: relative;
-  float: left;
+.header {
+  position: absolute;
   width: 100%;
+  display: block;
+  top: 0;
+}
+
+.container {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.rounded-image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.rounded-image__img {
+  position: relative;
+  width: initial;
+  height: inherit;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.info-box {
+  background: rgba(28, 31, 41, 0.5);
+  padding: 35px 70px;
+  &__photo {
+    width: 143px;
+    height: 143px;
+    margin: 0 auto 10px auto;
+  }
+}
+
+.info-box__name {
+  text-align: center;
+  font-family: 'Roboto-Medium';
+  font-size: 28px;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+
+.info-box__caption {
+  text-align: center;
+  opacity: 0.8;
+  margin-bottom: 30px;
 }
 
 .socials {
   text-align: center;
 }
 
-.socials_item {
+.socials__item {
   display: inline-block;
   list-style: none;
-  margin: 0 12px;
 }
 
-.socials_svg {
+.socials__link {
+  display: block;
+  padding: 0 12px;
+}
+
+.socials__svg {
+  fill: #fff;
   width: 27px;
   height: 27px;
-}
-
-.socials_svg {
-  fill: #fff;
+  .ic-link-in {
+    height: 23px;
+    margin-bottom: 3px;
+  }
   &:hover {
     fill: #0548be;
   }
 }
-
-.socials_svg.link-in {
-  height: 23px;
-  margin-bottom: 3px;
-}
-
-.menu-wellcome {
-  position: relative;
-  width: 100%;
-}
-
-.menu-wellcome .menu-wellcome__list {
-  margin-top: 100px;
-}
-
-.menu-wellcome__item {
+.menu-home__item {
   list-style: none;
-  color: #fff;
   display: table-cell;
   text-align: center;
   background: #004cd1;
-  font-family: 'Roboto-Medium';
-  cursor: pointer;
-  padding: 13px 0;
-  font-size: 16px;
   &:hover {
     background: rgba(4, 62, 163, 0.85);
   }
 }
 
-.menu-wellcome__link {
+.menu-home__link {
+  display: block;
+  font-family: 'Roboto-Medium';
   text-decoration: none;
-  color: #fff;
-  padding: 0 30.7px;
+  padding: 13px 30px;
+  white-space: nowrap;
 }
 
-.menu-wellcome__item:nth-child(2) {
-  border-left: solid 2px rgba(222, 227, 231, 0.50);
+.menu-home__item {
   border-right: solid 2px rgba(222, 227, 231, 0.50);
+  &:last-child{border-right: none;}
 }
 
-.copyright {
-  color: #fff;
-  text-align: center;
-  font-family: 'Roboto-Light';
-  font-size: 16px;
-}
-
-.copyright.page-wellcome {
+.footer {
   position: absolute;
   bottom: 40px;
   width: 100%;
+}
+
+.footer__copiright {
+  text-align: center;
+  font-family: 'Roboto-Light';
 }

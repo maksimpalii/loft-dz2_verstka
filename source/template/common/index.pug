@@ -1,17 +1,22 @@
 block content
-    .block-wellcome
-        .button_authorisation
-            a.button_authorisation__link(href="#") Авторизоваться
-        .info-box.info-box__wellcome.info-box__front
-            .info-box__wellcome__image
-                img(src = ("/assets/img/me.png"))
-            h1.info-box__wellcome__name= one.Globvars.name
-            h2.info-box__wellcome__comment Личный сайт веб разработчика
-            .info-box__wellcome__socials
+    .wrapper-home
+        .background-img
+        header.header
+            .button_authorization
+                a.button_authorization__link(href="#") Авторизоваться
+        .container
+            .info-box
+                .info-box__photo
+                    .rounded-image
+                        img(src="/assets/img/myphoto.jpg" class="rounded-image__img")
+
+                .info-box__name= one.Globvars.name
+                .info-box__caption Личный сайт веб разработчика
                 include ../common/_soc_widget
-            +navs('menu-wellcome', {
+            +nav('menu-home', {
                 "Мои работы": "works.html",
                 "Обо мне": "about.html",
                 "Блог": "blog.html"
             })
-    footer.copyright.page-wellcome © #{one.Globvars.name} | создано с любовью в LoftSchool | 2017
+        footer.footer
+            .footer__copiright © #{one.Globvars.name} | создано с любовью в LoftSchool | 2017

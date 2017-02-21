@@ -1,44 +1,42 @@
-mixin navs(className, items, activeItem)
-    navs(class=`${className}`)
-        .container
-            ul(class=`${className}__list`)
-                each item, key in items
-                    li(class=`${className}__item` + ( (index === activeItem) ? ` ${className}__item_active` : '') )
-                        a(class=`${className}__link` href=`${item}`)= key
+mixin nav(className, items, activeItem)
+    ul(class=`${className}`)
+        each item, key in items
+            li(class=`${className}__item`)
+                a(class=`${className}__link` href=`${item}`)= key
 
 
 mixin circles(groupsName)
-    ul.l-skills-list(class=`skills-list_${groupsName}`)
+    ul.skills-list(class=`skills-list_${groupsName}`)
         if groupsName === 'Frontend'
             each vars in one.Circles.Frontend
-                li.l-skills-list__item
-                    .c-skill
-                        svg.c-skill__circle
-                            circle.skills__circle-under(cx="60" cy="60" r="50")
-                            circle.skills__circle-above(cx="60" cy="60" r="50" style={opacity: vars.counts/100} stroke-dasharray= vars.counts*3.16  + ' 316')
-                        .c-skill__title= vars.name
+                li.skills-list__item
+                    .skill-item
+                        svg.skill-item__circle
+                            circle.skill-item__circle-under(cx="60" cy="60" r="50")
+                            circle.skill-item__circle-above(cx="60" cy="60" r="50" style={opacity: vars.counts/100} stroke-dasharray= vars.counts*3.16  + ' 316')
+                        .skill-item__title= vars.name
         else if groupsName === 'Backend'
             each vars in one.Circles.Backend
-                li.l-skills-list__item
-                    .c-skill
-                        svg.c-skill__circle
-                            circle.skills__circle-under(cx="60" cy="60" r="50")
-                            circle.skills__circle-above(cx="60" cy="60" r="50" style={opacity: vars.counts/100} stroke-dasharray= vars.counts*3.16 + ' 316')
-                        .c-skill__title= vars.name
+                li.skills-list__item
+                    .skill-item
+                        svg.skill-item__circle
+                            circle.skill-item__circle-under(cx="60" cy="60" r="50")
+                            circle.skill-item__circle-above(cx="60" cy="60" r="50" style={opacity: vars.counts / 100} stroke-dasharray= vars.counts * 3.16 + ' 316')
+                        .skill-item__title= vars.name
         else if groupsName === 'WorkFlow'
             each vars in one.Circles.WorkFlow
-                li.l-skills-list__item
-                    .c-skill
-                        svg.c-skill__circle
-                            circle.skills__circle-under(cx="60" cy="60" r="50")
-                            circle.skills__circle-above(cx="60" cy="60" r="50" style={opacity: vars.counts/100} stroke-dasharray= vars.counts*3.16  + ' 316' )
-                        .c-skill__title= vars.name
+                li.skills-list__item
+                    .skill-item
+                        svg.skill-item__circle
+                            circle.skill-item__circle-under(cx="60" cy="60" r="50")
+                            circle.skill-item__circle-above(cx="60" cy="60" r="50" style={opacity: vars.counts / 100} stroke-dasharray= vars.counts * 3.16 + ' 316')
+                        .skill-item__title= vars.name
         else
             each vars in one.Circles.None
-                li.l-skills-list__item
-                    .c-skill
-                        svg.c-skill__circle
-                            circle.skills__circle-under(cx="60" cy="60" r="50")
-                            circle.skills__circle-above(cx="60" cy="60" r="50" style={opacity: vars.counts / 100} stroke-dasharray= vars.counts * 3.16 + ' 316' )
-                        .c-skill__title= vars.name
+                li.skills-list__item
+                    .skill-item
+                        svg.skill-item__circle
+                            circle.skill-item__circle-under(cx="60" cy="60" r="50")
+                            circle.skill-item__circle-above(cx="60" cy="60" r="50" style={opacity: vars.counts / 100} stroke-dasharray= vars.counts * 3.16 + ' 316')
+                        .skill-item__title= vars.name
 
