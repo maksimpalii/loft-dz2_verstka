@@ -23,7 +23,7 @@
       "author": "Максим Палий",
       "description": "описание Works",
       "keywords": "ключевые слова Works",
-      "bodyClass": "works"
+      "bodyClass": "page-works"
     },
     "blog": {
       "title": "Blog",

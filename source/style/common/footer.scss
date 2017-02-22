@@ -1,4 +1,4 @@
-.footer-big {
+.section-footer{
   height: 185px;
   background-color: rgba(28, 31, 41, 0.5);
   overflow: hidden;
@@ -9,11 +9,11 @@
   bottom: 0;
 }
 
-.footer-big_top {
+.section-footer__container {
   height: 147px;
 }
 
-.footer-big_col {
+.footer-unit__col {
   display: table-cell;
   width: 33.33%;
 }
@@ -22,16 +22,16 @@
   margin: 24px 30px;
 }
 
-.footer-big_comment {
+.unit-content__slogan {
   @include footer_margin();
 }
 
-.footer-big_comment__text {
+.slogan-inner__text {
   line-height: 24px;
   width: 70%;
 }
 
-.footer-big_menu_soc {
+.footer-menu__nav {
   @include footer_margin();
   &:before {
     content: "";
@@ -45,25 +45,25 @@
   }
 }
 
-.footer-big_menu__item {
+.fl-item__item {
   padding-right: 35px;
   list-style-type: none;
   display: inline-block;
 }
 
-.footer-big_menu__link {
+.fl-link__link {
   text-decoration: none;
   &:hover {
     color: #004cd1;
   }
 }
 
-.footer-big_soc {
+.footer-menu__soc {
   float: left;
-  margin: 22px 0 0 -8px;
+  margin: -2px 0 0 22px;
 }
 
-.footer-contact_title {
+.footer-contact__title {
   @include footer_margin();
   &:before {
     content: "";
@@ -77,19 +77,19 @@
   }
 }
 
-.footer-contact_text {
+.fc-title__text {
   line-height: 26px;
 }
 
-.footer-big_bottom {
+.section-footer__copiright {
   background: rgba(8, 60, 150, 0.85);
   height: 38px;
+  padding: 4px 0;
 }
 
-.copiright-big {
+.copiright-inner__text {
   font-family: 'Roboto-Light';
   line-height: 24px;
-  width: 100%;
   text-align: center;
-  padding: 4px 0;
+
 }

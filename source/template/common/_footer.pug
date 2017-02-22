@@ -1,23 +1,23 @@
-footer.footer-big
-    .footer-big_top
-        .footer-big_col
-            .footer-big_comment
-                .footer-big_comment__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
-        .footer-big_col
-            .footer-big_menu_soc
-                +nav('footer-big_menu', {
+footer.section-footer
+    .section-footer__container.footer-unit
+        .footer-unit__col.unit-content
+            .unit-content__slogan.slogan-inner
+                .slogan-inner__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+        .footer-unit__col.footer-menu
+            .footer-menu__nav.footer-nav-menu
+                +nav-footer('footer-nav-menu', {
                     "Мои работы": "works.html",
                     "Обо мне": "about.html",
                     "Блог": "blog.html",
                     "Авторизация": "index.html",
                 })
-                .footer-big_soc
-                    include ../common/_soc_widget
-        .footer-big_col
-            .footer-contact_title
-                .footer-contact_text maksim_p.s.
-                .footer-contact_text maksim.palii@gmail.com
-                .footer-contact_text +380 99 742 20 50
-                .footer-contact_text г. Киев, пр-т Оболонский, д.40
-    .footer-big_bottom
-        .copiright-big © #{one.Globvars.name} | Создано с любовью в LoftSchool | 2016
+            .footer-menu__soc
+                include ../common/_soc_widget
+        .footer-unit__col.footer-contact
+            .footer-contact__title.fc-title
+                .fc-title__text maksim_p.s.
+                .fc-title__text maksim.palii@gmail.com
+                .fc-title__text +380 99 742 20 50
+                .fc-title__text г. Киев, пр-т Оболонский, д.40
+    .section-footer__copiright.copiright-inner
+        .copiright-inner__text © #{one.Globvars.name} | Создано с любовью в LoftSchool | 2016
