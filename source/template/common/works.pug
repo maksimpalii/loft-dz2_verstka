@@ -1,74 +1,71 @@
 block content
-    .wrapper
-        section.l-section.l-hero
-            include ../common/_soc_widget
+    .wrapper-works
+        header.section-header
+            .socials-about
+                include ../common/_soc_widget
             include ../common/_menu_gamburger
-            .l-hero__bg
-                .l-hero__bg__img
-            .l-hero__container
-                .c-user
-                    .c-user__pic
-                        img(src = ("/assets/img/me.png"))
-                    .c-user__profile
-                        .c-user__name= one.Globvars.name
-                        .c-user__comment Личный сайт веб разработчика
-                .c-hero__title-pic
-                    svg.svg__stars(preserveAspectRatio="xMinYMin meet")
-                        use.svg_icon.stars1(xlink:href="assets/img/sprite/sprite/img.svg#stars1")
-            a.scroll.pointer(href='#about')
-                svg.arrow-down__svg(preserveaspectratio='xMinYMin meet')
-                    use.svg__icon(xlink:href='assets/img/sprite/sprite/img.svg#arrow_down')
+        section.section-profile
+            .section-profile__bg.height_135pc
+            .profile-container
+                .profile-container__info.profile-box
+                    .profile-box__photo
+                        .rounded-image
+                            img(src="/assets/img/myphoto.jpg" class="rounded-image__img")
 
-
-
-        section.l-section.c-slider
-            .c-section-title-slider
-                .c-slider__star
-                    svg.svg__works__img(preserveAspectRatio="xMinYMin meet")
+                    .profile-box__name= one.Globvars.name
+                    .profile-box__caption Личный сайт веб разработчика
+                svg.bg-stars(preserveAspectRatio="xMinYMin meet")
+                    use.star-icon(xlink:href="assets/img/sprite/sprite/img.svg#stars1")
+            a.scroll-down(href='#about')
+                svg.scroll-down__svg(preserveaspectratio='xMinYMin meet')
+                    use(xlink:href='assets/img/sprite/sprite/img.svg#arrow_down')
+            .triangle-left.border_bottom_color_0d1120
+            .triangle-right.border_right_color_0d1120
+            .triangle-bottom
+        section.section-slider
+            .section-slider__container.sl-cont-inn
+                .sl-cont-inn__star.star-works
+                    svg.star-works__img(preserveAspectRatio="xMinYMin meet")
                         use(xlink:href="assets/img/sprite/sprite/img.svg#stars2")
-                .c-section-title-slider__title Мои работы
-            .c-slider__triangle
-                .c-triangle__left
-                .c-triangle__right
-                .c-triangle__bottom
+                .sl-cont-inn__title Мои работы
             include ../common/_works_slider
-        section.l-speakme
-            .l-speakme__background
-            .c-section-title-slider
-                .c-slider__star
-                    svg.svg__works__img(preserveAspectRatio="xMinYMin meet")
+        section.section-speakme
+            .section-speakme__background
+            .section-speakme__info.slider-star
+                .slider-star__inner.svg-works
+                    svg.svg-works__img(preserveAspectRatio="xMinYMin meet")
                         use(xlink:href="assets/img/sprite/sprite/img.svg#stars2")
-                .c-section-title-slider__title
+                .slider-star__title
                                                 | Что обо мне
                                                 br
                                                 | говорят
-            .l-speakme__comments
-                .c-speakme__comments
-                    .c-speakme__comments__img
-                        img.comments__img(src="assets/img/photo-dima.png")
-                    .c-speakme__comments__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                    .c-speakme__comments__sign
-                        .c-speakme__comments__sign__name Ковальчук Дмитрий
-                        .c-speakme__comments__sign__position — основатель Loftschool
+            .section-speakme__comments.com-items
+                .com-items__comments.com-item
+                    .com-item__img.com-img
+                        img.com-img__img(src="assets/img/photo-dima.png")
+                    .com-item__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                    .com-item__sign.com-sign-in
+                        .com-sign-in__name Ковальчук Дмитрий
+                        .com-sign-in__position — основатель Loftschool
 
-                .c-speakme__comments
-                    .c-speakme__comments__img
-                        img.comments__img(src="assets/img/photo-vlad.png")
-                    .c-speakme__comments__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-                    .c-speakme__comments__sign
-                        .c-speakme__comments__sign__name Сабанцев Владимир
-                        .c-speakme__comments__sign__position — преподаватель
-            .l-works_contacts
-                form.c-works_contacts__form
-                    .contacts__form__title Связаться со мной
-                    input#name.input(placeholder='Ваше имя', name='name')
-                    input#mail.input(placeholder='Ваш email', name='mail')
+                .com-items__comments.com-item
+                    .com-item__img.com-img
+                        img.com-img__img(src="assets/img/photo-vlad.png")
+                    .com-item__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                    .com-item__sign.com-sign-in
+                        .com-sign-in__name Сабанцев Владимир
+                        .com-sign-in__position — преподаватель
+            .section-speakme__contacts.form-works
+                form.form-works__form.form-inner
+                    .form-inner__title Связаться со мной
+                    input#name.input(placeholder='Ваше имя', name='name', class='form-name')
+                    input#mail.input(placeholder='Ваш email', name='mail', class='form-mail')
                     textarea#message.textarear(placeholder='Ваше сообщение', name='message')
-                    .contacts__form__buttons-panel
-                        input.buttons-panel__item.buttons-panel__item--send(type='submit', value='Отправить', disable='true')
-                        input.buttons-panel__item.buttons-panel__item--clear(type='reset', value='Отчистить')
-                a.smooth-scroll.pointer-bottom(href='#header-works')
-                    svg.arrow-down__svg(preserveaspectratio='xMaxYMax meet', viewbox='0 0 25.18 16.164')
-                        use.svg__icon(xlink:href='assets/img/sprite/img.svg#arrow_down')
+                    .form-inner__buttons.form-button-in
+                        input.form-button-in__item.item_style_send(type='submit', value='Отправить', disable='true')
+                        input.form-button-in__item.item_style_clear(type='reset', value='Отчистить')
+                a.scroll-down(href='#about')
+                    svg.scroll-down__svg.rotate_180(preserveaspectratio='xMinYMin meet')
+                        use(xlink:href='assets/img/sprite/sprite/img.svg#arrow_down')
 
         include ../common/_footer
