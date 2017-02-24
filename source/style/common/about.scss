@@ -82,13 +82,20 @@ $varCircHtml5: 0.85;
   padding: 62px 70px;
 }
 
-.profile-box__photo {
+.profile-container__photo {
   width: 143px;
   height: 143px;
   margin: -65px auto 0px auto;
 }
-
-.bg-stars {
+.profile-container__image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+.profile-container__stars {
   fill: #fff;
   opacity: .07;
   width: 460px;
@@ -99,13 +106,13 @@ $varCircHtml5: 0.85;
   z-index: -1;
 }
 
-.profile-box__name {
+.profile-container__name {
   font-family: 'Roboto-Medium';
   margin: 20px 0 6px 0;
   font-size: 35px;
 }
 
-.profile-box__caption {
+.profile-container__caption {
   opacity: 0.8;
 }
 
@@ -167,7 +174,7 @@ $varCircHtml5: 0.85;
   }
 }
 
-.box-title__title {
+.about-profile__h1 {
   font-family: 'SansusWebissimo';
   text-transform: uppercase;
   padding-left: 120px;
@@ -175,7 +182,7 @@ $varCircHtml5: 0.85;
   color: #474b57;
 }
 
-.box-title__bg {
+.about-profile__bg {
   position: absolute;
   left: 64px;
   top: -34px;
@@ -195,18 +202,18 @@ $varCircHtml5: 0.85;
   float: right;
 }
 
-.about-caption__img {
+.about-profile__img {
   margin: 20px 20px 30px 0;
   float: right;
 }
 
-.about-caption__title {
+.about-profile__title {
   width: 100%;
   margin: 0 auto;
   clear: both;
 }
 
-.caption-title__text {
+.about-profile__text {
   color: #474b57;
   font-size: 35px;
   text-align: center;
@@ -224,16 +231,16 @@ $varCircHtml5: 0.85;
   }
 }
 
-.about-caption__description {
+.about-profile__description {
   margin-top: 13px;
   clear: both;
 }
 
-.description-box__text {
+.about-profile__description-box {
   padding: 12px 78px 35px 33px;
 }
 
-.txt-in__text {
+.about-profile__textin {
   color: #474b57;
   line-height: 24px;
   margin-top: 10px;
@@ -247,13 +254,8 @@ $varCircHtml5: 0.85;
   width: 50%;
 }
 
-.skills-info__title {
-  color: #474b57;
-  font-size: 35px;
-  font-family: 'SansusWebissimo';
-  text-transform: uppercase;
-  text-align: center;
-  display: block;
+.skills-info__block {
+  display: block;text-align: center;
   padding-top: 13px;
   &:after {
     content: '';
@@ -265,14 +267,18 @@ $varCircHtml5: 0.85;
     margin-top: 21px;
   }
 }
-
+.skills-info__text{  color: #474b57;
+  font-size: 35px;
+  font-family: 'SansusWebissimo';
+  text-transform: uppercase;
+ }
 .skills-info__desc {
   padding: 36px 50px 0 38px;
   color: #474b57;
   line-height: 24px;
 }
 
-.skills-items__list {
+.skills-info__list {
   margin-top: 15px;
 }
 
@@ -280,7 +286,7 @@ $varCircHtml5: 0.85;
   padding: 15px 40px 35px 40px;
 }
 
-.skills-group__item {
+.skills-info__items {
   list-style-type: none;
   padding-top: 34px;
 }
@@ -291,43 +297,43 @@ $varCircHtml5: 0.85;
   color: #474b57;
 }
 
-.skills-items__title {
+.skills-info__title {
   font-family: 'Roboto-Medium';
   font-size: 28px;
   color: #474b57;
 }
 
-.skill-info__item {
+.skills-info__item {
   list-style-type: none;
   display: table-cell;
 }
 
-.skill-inner__content {
+.skills-info__content {
   width: 120px;
   height: 120px;
   position: relative;
   margin-right: 40px;
 }
 
-.skill-core__circle {
+.skills-info__circle {
   width: 120px;
   height: 120px;
 }
 
-.circle-svg__circle-under {
+.skills-info__circle-under {
   stroke: #dfdcd5;
   stroke-dasharray: 0;
   stroke-width: 20;
   fill: none;
 }
 
-.circle-svg__circle-above {
+.skills-info__circle-above {
   stroke: #1056d1;
   stroke-width: 20;
   fill: none;
 }
 
-.skill-core__title {
+.skills-info__name {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -377,12 +383,12 @@ $varCircHtml5: 0.85;
   padding: 30px 15px;
 }
 
-.maps-contact__list {
+.map-info__list {
   flex-direction: row;
   display: flex;
 }
 
-.pair-block__items {
+.map-info__items {
   flex-direction: column;
   display: flex;
 }
@@ -391,14 +397,14 @@ $varCircHtml5: 0.85;
   padding-left: 50px;
 }
 
-.links-item__link {
+.map-info__icon {
   align-items: center;
   flex-direction: row;
   display: flex;
   margin-bottom: 25px;
 }
 
-.link-core__link {
+.map-info__link {
   color: #474b57;
   text-decoration: none;
   font-family: 'Roboto-Medium';
@@ -406,7 +412,7 @@ $varCircHtml5: 0.85;
   margin-bottom: 5px;
 }
 
-.link-core__svg {
+.map-info__svg {
   width: 46px;
   height: 50px;
   fill: #004cd1;

@@ -1,31 +1,30 @@
-.section-slider__main.sl-main-block
-    .sl-main-block__title.sl-mainblock
-        .sl-mainblock__info.slm-block
-            .slm-block__title Сайт школы онлайн образования
-            .slm-block__description HTML , CSS, JAVASCRIPT
-            .slm-block__button.slider-slink
-                a(href="#" class="slider-slink__link") Посмотреть сайт
-    .sl-main-block__img.sl-imgblock
-        .sl-imgblock__box.sl-inner
-            ul.sl-inner__list.sl-items
-                li.sl-items__item.sl-img
-                    img(src="/assets/img/big_work.png" class="sl-img__img")
-        .sl-imgblock__nav.nav-down.nav-up
-            .nav-down__inner.sl-nav
-                .sl-nav__inner.button-down
+.slider-main
+    .slider-info
+        .slider-info__box
+            .slider-info__title Сайт школы онлайн образования
+            .slider-info__description HTML , CSS, JAVASCRIPT
+            .slider-info__button
+                a.slider-info__link(href="#") Посмотреть сайт
+    .slider-imgs
+        .slider-imgs__box
+            ul.slider-imgs__list
+                li.slider-imgs__item
+                    img.slider-imgs__img(src="/assets/img/big_work.png")
+        .slider-imgs__nav
+            .slider-imgs__down
+                .slider-imgs__inner
                     svg.button-down__svg(preserveaspectratio='xMaxYMax meet', viewbox='0 0 25.18 16.164')
                         use(xlink:href='assets/img/sprite/sprite/img.svg#arrow_down')
 
-                .sl-nav__mask.sl-box
-                ul.sl-box__list.sl-items
-                    li.sl-items__item
+                ul.slider-imgs__list
+                    li.slider-imgs__item
                         img(src="/assets/img/big_arrow_down.png")
-            .nav-up__inner.sl-nav
-                .sl-nav__inner.button-up
+            .slider-imgs__up
+                .slider-imgs__inner
                     svg.button-up__svg(preserveaspectratio='xMaxYMax meet', viewbox='0 0 25.18 16.164')
                         use(xlink:href='assets/img/sprite/sprite/img.svg#arrow_down')
-                .sl-nav__mask.sl-box
-                ul.sl-box__list.sl-items
-                    li.l-items__item
+
+                ul.slider-imgs__list
+                    li.slider-imgs__item
                         img(src="/assets/img/big_arrow_up.png")
 

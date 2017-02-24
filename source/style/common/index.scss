@@ -48,7 +48,7 @@
   transform: translate(-50%, -50%);
 }
 
-.rounded-image {
+.info-box__imageround {
   position: relative;
   height: 100%;
   width: 100%;
@@ -57,7 +57,7 @@
   z-index: 1;
 }
 
-.rounded-image__img {
+.rounded-image {
   position: relative;
   width: initial;
   height: inherit;

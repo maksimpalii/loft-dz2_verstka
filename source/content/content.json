@@ -30,7 +30,7 @@
       "author": "Максим Палий",
       "description": "описание блога",
       "keywords": "ключевые слова блога",
-      "bodyClass": "blog"
+      "bodyClass": "page-blog"
     }
   },
   "Circles" : {
