@@ -5,26 +5,26 @@
             .slider-info__description HTML , CSS, JAVASCRIPT
             .slider-info__button
                 a.slider-info__link(href="#") Посмотреть сайт
-    .slider-imgs
-        .slider-imgs__box
+
+    .slider-imgs__box
+        ul.slider-imgs__lists
+            li.slider-imgs__list-item
+                img.slider-imgs__img(src="/assets/img/big_work.png")
+    .slider-imgs__nav
+        .slider-imgs__down
+            .slider-imgs__inner
+                svg.button-down__svg(preserveaspectratio='xMaxYMax meet', viewbox='0 0 25.18 16.164')
+                    use(xlink:href='assets/img/sprite/sprite/img.svg#arrow_down')
+
             ul.slider-imgs__list
                 li.slider-imgs__item
-                    img.slider-imgs__img(src="/assets/img/big_work.png")
-        .slider-imgs__nav
-            .slider-imgs__down
-                .slider-imgs__inner
-                    svg.button-down__svg(preserveaspectratio='xMaxYMax meet', viewbox='0 0 25.18 16.164')
-                        use(xlink:href='assets/img/sprite/sprite/img.svg#arrow_down')
+                    img.slider-imgs__navimg(src="/assets/img/big_arrow_down.png")
+        .slider-imgs__up
+            .slider-imgs__inner
+                svg.button-up__svg(preserveaspectratio='xMaxYMax meet', viewbox='0 0 25.18 16.164')
+                    use(xlink:href='assets/img/sprite/sprite/img.svg#arrow_down')
 
-                ul.slider-imgs__list
-                    li.slider-imgs__item
-                        img(src="/assets/img/big_arrow_down.png")
-            .slider-imgs__up
-                .slider-imgs__inner
-                    svg.button-up__svg(preserveaspectratio='xMaxYMax meet', viewbox='0 0 25.18 16.164')
-                        use(xlink:href='assets/img/sprite/sprite/img.svg#arrow_down')
-
-                ul.slider-imgs__list
-                    li.slider-imgs__item
-                        img(src="/assets/img/big_arrow_up.png")
+            ul.slider-imgs__list
+                li.slider-imgs__item
+                    img.slider-imgs__navimg(src="/assets/img/big_arrow_up.png")
 

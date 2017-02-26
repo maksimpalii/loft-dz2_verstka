@@ -8,13 +8,14 @@ block content
             .section-profile__bg.section-profile_bg_blog
             .profile-container
                 .profile-container__info
-                    .profile-container__photo.profile-container_style_blog
+                    .profile-container__photo
                         .profile-container__image
                             img(src="/assets/img/myphoto.jpg" class="rounded-image")
                     .profile-container__name.style_blog-name Блог
                     .profile-container__caption Статьи, которые я написал
-                svg.profile-container__stars.profile_container_blog_stars(preserveAspectRatio="xMinYMin meet")
-                    use.star-icon(xlink:href="assets/img/sprite/sprite/img.svg#stars1")
+            .profile-container__bgicons
+                .profile-container__icons
+                    svg.profile-container__stars(preserveAspectRatio="xMinYMin meet")
             .triangle-left.triangle-left_color_light
             .triangle-right.triangle-right_color_light
         section.section-blog
@@ -26,6 +27,7 @@ block content
                             li.section-blog__item Приёмы в вёрстке, без которых не обходится ни один сайт
                             li.section-blog__item Самый необходимый набор Gulp плагинов
                             li.section-blog__item Почему я выбрал Jade
+                        .menu-blog-nav.display_tablets_yes
                     .section-blog__content
                         .section-blog__post
                             .section-blog__title Самое важное в SASS

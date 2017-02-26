@@ -1,0 +1,28 @@
+.container-signin
+    .welcome-box__name.uppercase Авторизуйтесь
+    form#logInForm.form.log-in-form(action='#!')
+        .log-in-form__wrapper
+            .log-in__name.log-in--field
+                .log-in-logo
+                    svg.log-in-logo__svg.log-in-logo__svg--name(preserveaspectratio='xMinYMin meet', viewbox='0 0 14.137 15.422')
+                        use.svg__icon(xlink:href='assets/img/sprite/sprite/img.svg#login')
+                input#login.log-in__input.form-field.error.log-in__input--name(placeholder='Логин', name='login')
+            .log-in__pass.log-in--field
+                .log-in-logo
+                    svg.log-in-logo__svg.log-in-logo__svg--pass(preserveaspectratio='xMinYMin meet', viewbox='0 0 16.897 15.984')
+                        use.svg__icon(xlink:href='assets/img/sprite/sprite/img.svg#password')
+                input#pass.log-in__input.form-field.error.log-in__input--pass(type='password', placeholder='Пароль', name='password')
+            .log-in__capcha
+                .capcha__robot
+                    input#human-checkbox.capcha__chekbox.human-status(type='checkbox', value='human')
+                    label.capcha__answer.capcha__answer--chekbox(for='human-checkbox') Я человек
+                .capcha__robot-repeat
+                    .capcha__question Вы точно не робот?
+                    .capcha__answers
+                        input#human-yes-radio.answers__radio.human-status(type='radio', name='capcha-answers', value='yes')
+                        label.capcha__answer.capcha__answer--yes.capcha__answer--radio(for='human-yes-radio') Да
+                        input#human-no-radio.answers__radio.human-status(type='radio', name='capcha-answers', value='no', checked='')
+                        label.capcha__answer.capcha__answer--radio(for='human-no-radio') Не уверен
+        .buttons-panel.bottom-form.bottom-form--log-in
+            input#home.buttons-panel__item(type='button', value='На главную')
+            input.buttons-panel__item.buttons-panel__item--send(type='submit', value='Войти', disable='true')

@@ -1,7 +1,11 @@
 .section-profile_style_blog {
   height: 400px;
+  min-height: 400px;
+  @include iphone{
+    height: 100vh;
+  }
 }
-
+.page-blog{width: 100%;}
 .style_blog-name {
   font-family: 'Sansus-Webissimo-Regular';
   font-size: 63px;
@@ -12,7 +16,9 @@
 }
 
 .section-profile_bg_blog {
-  background-position-y: 75%;
+  background-position: bottom;
+  min-height: 115%;
+
 }
 
 .profile-container_style_blog {
@@ -43,23 +49,57 @@
 }
 
 .section-blog__inner {
-  width: 1550px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
   padding-top: 58px;
 }
 
 .section-blog__menu {
-  width: 18%;
+  width: 267px;
   position: relative;
   display: inline-block;
   vertical-align: top;
+  transition-duration: 0.5s;
+  @include tablets{
+    z-index: 100;
+    position: fixed;
+    left:-267px;
+    background: #253468;
+    height: 100vh;
+    display: flex;
+    z-index: 10;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+  }
 }
+.section-blog__menu.active{
+  left:0;
+  box-shadow: 3px 0px 10px 0px rgba(0,0,0,0.3);
+}
+.menu-blog-nav{
+  cursor: pointer;
+  display: none;
+  width: 100px;
+  border-radius: 50%;
+  height: 100px;
+  background: #253468;
+  box-shadow: 3px 0px 10px 0px rgba(0,0,0,0.3);
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  z-index: -1;
 
+}
+.display_tablets_yes{
+  display: block;
+}
 .section-blog__content {
-  width: 57%;
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 100px;
+  width: 65%;
+  @include tablets{
+    width: 95%;
+  }
+
 }
 
 .section-blog__post {
@@ -93,6 +133,7 @@
   font-family: "Roboto-Regular";
   line-height: 26px;
   margin: 20px 0px;
+  overflow: hidden;
 }
 
 .section-blog__p {
@@ -101,11 +142,17 @@
 
 .section-blog__img {
   margin: 5px;
+  width: 100%;
 }
 
 .section-blog__list {
   text-align: right;
   width: 267px;
+  @include tablets{
+    width: 250px;
+    z-index: 10;
+    background: #253468;
+  }
 }
 
 .section-blog__item {
@@ -115,13 +162,23 @@
   font-family: "Roboto-Regular";
   line-height: 26px;
   padding: 15px 18px 11px 0;
+  @include tablets{
+    color: #fff;
+    opacity: 0.7;
+  }
 }
 
 .menu_item_active {
   color: #083c96;
   font-family: "Roboto-Medium";
   border-right: 3px solid #0548be;
+  @include tablets{
+    border: none;
+    color: #fff;
+    opacity: 1;
+  }
 }
+
 
 .page-blog .section-footer {
   position: relative;

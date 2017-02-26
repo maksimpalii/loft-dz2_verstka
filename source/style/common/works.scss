@@ -1,11 +1,17 @@
+.page-works {
+  width: 100%;
+
+}
+
+.scrool-down__style-page-works{bottom: -80px;}
+
 .triangle-left_color_dark {
-  border-bottom: 158px solid rgba(13, 17, 32, 0.85);
+  border-bottom-color: rgba(13, 17, 32, 0.85);
 }
 
 .triangle-right_color_dark {
-  border-right: 900px solid rgba(13, 17, 32, 0.85);
+  border-right-color: rgba(13, 17, 32, 0.85);
 }
-
 
 .triangle-bottom {
   background: rgba(13, 17, 32, 0.85);
@@ -13,10 +19,6 @@
   height: 185px;
   position: absolute;
   bottom: -185px;
-}
-
-.height_135pc {
-  height: 135%;
 }
 
 .c-section-slider-title {
@@ -45,6 +47,11 @@
   opacity: 0.1;
   transform-origin: center;
   transform: rotate(189deg) scale(1.25);
+  @include iphone{
+    transform: rotate(189deg) scale(0.7);
+    left:-200px;
+    top:-100px;
+  }
 }
 
 .sl-cont-inn__title {
@@ -58,6 +65,9 @@
   position: absolute;
   color: #fff;
   line-height: 69px;
+  @include iphone{
+    font-size: 53px;
+  }
 }
 
 @import 'common/works-slider';
@@ -112,6 +122,14 @@
 .section-speakme {
   height: 1355px;
   position: relative;
+  @include iphone {
+    height: auto;
+    padding-bottom: 500px;
+  }
+}
+
+.com-img__img {
+  width: 100%;
 }
 
 .section-speakme__background {
@@ -130,6 +148,10 @@
   justify-content: center;
   display: flex;
   margin-top: 70px;
+  @include iphone {
+    flex-direction: column;
+  }
+
 }
 
 .com-items__comments {
@@ -215,12 +237,14 @@
     margin-top: 21px;
   }
 }
+
 .form-name, .form-mail {
   margin: 30px 20px 0px 20px;
   padding: 12px 16px;
   height: 21px;
   width: 308px;
 }
+
 .form-inner {
 
   #mail {
@@ -275,7 +299,7 @@
 
 .item_style_clear {
   font: 16px "Roboto-Regular";
-  background-color: rgba(255, 255, 255, 0.07);
+  background-color: rgba(255, 255, 255, 0);
   color: rgba(255, 255, 255, 0.5);
   float: left;
   cursor: pointer;
@@ -285,7 +309,9 @@
   height: 44px;
   width: 50%;
 }
-.scroll-up{    display: block;
+
+.scroll-up {
+  display: block;
   position: absolute;
   z-index: 3;
   top: 507px;
@@ -294,10 +320,14 @@
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-.scroll-up__svg{
+
+.scroll-up__svg {
   cursor: pointer;
   width: 26px;
   height: 28px;
   fill: rgba(255, 255, 255, 0.7);
 }
-.rotate_180{transform: rotate(180deg);}
+
+.rotate_180 {
+  transform: rotate(180deg);
+}

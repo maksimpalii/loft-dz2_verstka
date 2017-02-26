@@ -10,6 +10,7 @@ global.$ = {
     app: require('./gulp/paths/app.js')
   },
   gulp: require('gulp'),
+  cssunit: require('gulp-css-unit'),
   del: require('del'),
   fs: require('fs'),
   spritesmith: require('gulp.spritesmith'),
