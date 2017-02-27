@@ -87,8 +87,17 @@
   position: absolute;
   z-index: -1;
   min-height: 121vh;
+  @include iphone{
+    min-height: 135vh;
+  }
 }
-
+.wrapper-works{
+  .section-profile__bg{
+    @include iphone{
+      min-height: 175vh;
+    }
+  }
+}
 .profile-container {
   left: 50%;
   top: 50%;

@@ -23,7 +23,7 @@ $varCircHtml5: 0.85;
 }
 
 @mixin iphone(){
-  @media screen and (max-width: 320px){
+  @media screen and (max-width: 360px){
     @content;
   }
 }
