@@ -1,17 +1,17 @@
 .container-signin
-    .welcome-box__name.uppercase Авторизуйтесь
-    form#logInForm.form.log-in-form(action='#!')
-        .log-in-form__wrapper
-            .log-in__name.log-in--field
-                .log-in-logo
-                    svg.log-in-logo__svg.log-in-logo__svg--name(preserveaspectratio='xMinYMin meet', viewbox='0 0 14.137 15.422')
+    .welcome-box__name.text_uppercase Авторизуйтесь
+    form#logInForm.login-form(action='#!')
+        .login-form__wrapper
+            .login-form__name.login-form_field
+                .login-form__field
+                    svg.login-form__svg.login-form__svg-name(preserveaspectratio='xMinYMin meet', viewbox='0 0 14.137 15.422')
                         use.svg__icon(xlink:href='assets/img/sprite/sprite/img.svg#login')
-                input#login.log-in__input.form-field.error.log-in__input--name(placeholder='Логин', name='login')
-            .log-in__pass.log-in--field
-                .log-in-logo
-                    svg.log-in-logo__svg.log-in-logo__svg--pass(preserveaspectratio='xMinYMin meet', viewbox='0 0 16.897 15.984')
+                input#login.login-form__input.error.login-form__input-name(placeholder='Логин', name='login')
+            .login-form__pass.login-form_field
+                .login-form__field
+                    svg.login-form__svg.login-form__svg-pass(preserveaspectratio='xMinYMin meet', viewbox='0 0 16.897 15.984')
                         use.svg__icon(xlink:href='assets/img/sprite/sprite/img.svg#password')
-                input#pass.log-in__input.form-field.error.log-in__input--pass(type='password', placeholder='Пароль', name='password')
+                input#pass.login-form__input.error.login-form__input-pass(type='password', placeholder='Пароль', name='password')
             .log-in__capcha
                 .capcha__robot
                     input#human-checkbox.capcha__chekbox.human-status(type='checkbox', value='human')
