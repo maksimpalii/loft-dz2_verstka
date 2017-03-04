@@ -19,7 +19,7 @@ var preloader = (function () {
         var percents = Math.ceil(current / total * 100);
 
         $('.loading-value').text(percents + '%');
-        $('.big.circle').css({"stroke-dasharray": percents + "157"});
+        $('.big.circle').css({'stroke-dasharray': percents * 1.57 + ' ' + '157'});
 
         if (percents >= 100) {
             preloader.fadeOut();
