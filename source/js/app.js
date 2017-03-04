@@ -48,11 +48,10 @@ var preloader = (function () {
         init: function () {
             var imgs = imgPath.toArray();
             loadImages(imgs);
+            //console.log(imgs);
         }
     }
 }());
-
-preloader.init();
 
 var parallaxMouse = (function () {
     var parallaxContainer = document.querySelector('#parallax');
@@ -182,3 +181,4 @@ window.onscroll = function () {
     var wScroll = window.pageYOffset;
     parallax.init(wScroll);
 }
+preloader.init();
