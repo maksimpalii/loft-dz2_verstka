@@ -132,12 +132,14 @@
 }
 
 .slider-imgs__img {
-  width: 100%;
+  max-width: 643px;
+  width: 50vw;
+  height: 100%;
   @include tablets {
     max-height: 380px;
     padding: 100px;
     height: 100%;
-    width: 90vw;
+  width: auto;
   }
   @include iphone{
     padding: 50px 0;

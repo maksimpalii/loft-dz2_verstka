@@ -57,16 +57,20 @@ block content
                         .com-sign-in__name Сабанцев Владимир
                         .com-sign-in__position — преподаватель
             .section-speakme__contacts.form-works
-                form.form-works__form.form-inner
-                    .form-inner__title Связаться со мной
-                    input#name.input(placeholder='Ваше имя', name='name', class='form-name')
-                    input#mail.input(placeholder='Ваш email', name='mail', class='form-mail')
-                    textarea#message.textarear(placeholder='Ваше сообщение', name='message')
+                .form-works__box
+                    form.form-works__form.form-inner
+                        .form-inner__title Связаться со мной
+                        input#name.input(placeholder='Ваше имя', name='name', class='form-name')
+                        .error-form.error-form_name
+                        input#mail.input(placeholder='Ваш email', name='mail', class='form-mail')
+                        .error-form.error-form_mail
+                        textarea#message.textarear(placeholder='Ваше сообщение', name='message')
+                        .error-form.error-form_text
                     .form-inner__buttons.form-button-in
-                        input.form-button-in__item.item_style_send(type='submit', value='Отправить', disable='true')
-                        input.form-button-in__item.item_style_clear(type='reset', value='Отчистить')
-                .form-works__bg
-                    .form-works__bginn
+                        button.form-button-in__item.item_style_send Отправить
+                        button.form-button-in__item.item_style_clear Отчистить
+                    .form-works__bg
+                        .form-works__bginn
                 a.scroll-down.scrool-down__style-page-works(href='#about')
                     svg.scroll-down__svg.rotate_180(preserveaspectratio='xMinYMin meet')
                         use(xlink:href='assets/img/sprite/sprite/img.svg#arrow_down')

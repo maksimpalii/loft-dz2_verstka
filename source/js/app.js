@@ -168,6 +168,65 @@ var navmainmenu = (function () {
         }
     }
 }());
+
+var formWorks = (function () {
+    var button_send = document.querySelector('.item_style_send'),
+        button_clear = document.querySelector('.item_style_clear');
+    if (button_send) {
+
+        button_send.addEventListener('click', function () {
+            var user_name = document.getElementById("name").value,
+                user_email_validate = document.getElementById('mail').value.indexOf("@"),
+                user_email = document.getElementById('mail').value.indexOf("@"),
+                user_message = document.getElementById('message').value,
+                error_form_name = document.querySelector('.error-form_name'),
+                error_form_mail = document.querySelector('.error-form_mail'),
+                error_form_text = document.querySelector('.error-form_text');
+            console.log('verification');
+            var proceed = true;
+            error_form_name.innerHTML  = '';
+            error_form_mail.innerHTML = '';
+            error_form_text.innerHTML = '';
+            if (!user_name) {
+                error_form_name.innerHTML  = 'Это поле не должно быть пустым';
+                proceed = false;
+            }
+            if (user_email_validate == -1) {
+                error_form_mail.innerHTML = 'Неверный формат электронной почты';
+                proceed = false;
+            }
+            if (!user_message) {
+                error_form_text.innerHTML = 'Это поле не должно быть пустым';
+                proceed = false;
+            }
+            if (proceed) {
+                console.log('send');
+                var xhr = new XMLHttpRequest();
+                var params = {
+                    'u_name': user_name,
+                    'u_email': user_email,
+                    'u_message': user_message
+                };
+                //xhr.open("GET", '../form.txt' + params, true);
+                xhr.open("GET", '../form.txt', true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                        console.log(xhr.responseText);
+                    }
+                };
+                xhr.send();
+            }
+
+        });
+        button_clear.addEventListener('click', function () {
+            document.getElementById("name").value = '';
+            document.getElementById("mail").value = '';
+            document.getElementById('message').value = '';
+        });
+    };
+}());
+
+
 navmainmenu.set();
 parallaxMouse();
 boxFlip();
@@ -182,3 +241,9 @@ window.onscroll = function () {
     parallax.init(wScroll);
 }
 preloader.init();
+
+
+
+
+
+
