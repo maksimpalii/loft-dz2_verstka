@@ -58,7 +58,7 @@
   display: block;
   position: absolute;
   z-index: -1;
-  min-height: 121vh;
+  min-height: 160vh;
   @include iphone{
     min-height: 135vh;
   }

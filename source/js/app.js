@@ -250,8 +250,7 @@ var slider = (function(){
     var moveSlideDesc = function (container, direction) {
         var items = $('.slider-info__box', container),
             activeItem = items.filter('.active'),
-            direction = direction == 'opacity' ? 0 : 1;
-//console.log(items.active);
+            direction = direction == 'display' ? "none" : "block";
         if (counter >= items.length) counter = 0;
 
         var reqItem = items.eq(counter);
@@ -261,7 +260,7 @@ var slider = (function(){
         }, duration);
 
         reqItem.animate({
-            'opacity' : '1'
+            'opacity' : direction
         }, duration, function () {
             activeItem.removeClass('active').css('opacity', direction);
             $(this).addClass('active');
@@ -274,7 +273,6 @@ var slider = (function(){
         var items = $('.slider-imgs__list-item', container),
             activeItem = items.filter('.active'),
             direction = direction == 'opacity' ? 0 : 1;
-//console.log(items.active);
         if (counter >= items.length) counter = 0;
 
         var reqItem = items.eq(counter);
@@ -301,7 +299,6 @@ var slider = (function(){
             direction = direction == 'down' ? 100 : -100;
 
         if (counter <= - items.length) counter = 0;
-        //console.log("Downp" + counter)
         var reqItem = items.eq(counter - 1 );
 
         activeItem.animate({
@@ -322,8 +319,6 @@ var slider = (function(){
             direction = direction == 'down' ? 100 : -100;
 
         if (counter >= items.length - 1) counter = -1;
-        //console.log("Up" + counter);
-
         var reqItem = items.eq(counter + 1);
 
         activeItem.animate({
@@ -344,14 +339,13 @@ var slider = (function(){
         init: function () {
 
             $('.slider-imgs__up').on('click', function(e){
-                //console.log("click-top");
 
                 e.preventDefault();
 //counter++;
                 if (!inProcess) {
                     inProcess = true;
                     counter++;
-                    moveSlideDesc($('.slider-info'), 'opacity');
+                    moveSlideDesc($('.slider-info'), 'block');
                     moveSlideMain($('.slider-imgs__box'), 'opacity');
                     moveSlideDown($('.slider-imgs__down'), 'down');
                     moveSlideUp($('.slider-imgs__up'), 'up');
@@ -362,14 +356,13 @@ var slider = (function(){
 
             });
             $('.slider-imgs__down').on('click', function(e){
-                //console.log("click-bottom");
                 e.preventDefault();
 
                 //counter--;
                 if (!inProcess) {
                     inProcess = true;
                     counter--;
-                    moveSlideDesc($('.slider-info'), 'opacity');
+                    moveSlideDesc($('.slider-info'), 'block');
                     moveSlideMain($('.slider-imgs__box'), 'opacity');
                     moveSlideUp($('.slider-imgs__up'), 'up');
                     moveSlideDown($('.slider-imgs__down'), 'down');

@@ -170,6 +170,7 @@
   width: 50%;
   display: flex;
   justify-content: center;
+  background: #fff;
   @include tablets {
     order: 5;
     width: 100%;
