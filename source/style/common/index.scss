@@ -21,6 +21,10 @@
   @include centered();
   position: absolute;
   z-index: -1;
+  background-image: url(/assets/img/back_main.jpg);
+  background-size: 240vh;
+  background-repeat: no-repeat;
+
 }
 
 .background__video {
@@ -31,7 +35,7 @@
   left: -35px;
   top: -35px;
   @include iphone{
-    left: -15vw;
+    display: none;
   }
 
 }
